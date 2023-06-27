@@ -3,7 +3,11 @@ body {
 
   font-family: "Open Sans", sans-serif;
 
-  background: linear-gradient(180deg, rgb(227, 255, 248, 0) 82.08%, rgb(227, 255, 248, 0.38) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(227, 255, 248, 0) 0%,
+    rgba(227, 255, 248, 0.38) 100%
+  );
 
   min-height: 100vh;
 }
@@ -14,7 +18,7 @@ body {
   padding-top: 65px;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +26,7 @@ body {
   margin-bottom: 55px;
 }
 
-.list {
+ul {
   display: flex;
   gap: 48px;
   list-style: none;
@@ -35,27 +39,27 @@ a {
   text-decoration: none;
 }
 
-.list .item a {
-    opacity: 0.5;
+ul li a {
+  opacity: 0.5;
 }
 
-.list .item a:hover {
+ul li a:hover {
   font-weight: bold;
   opacity: 1;
 }
 
-.list,
-.title {
+ul,
+h1 {
   font-family: "Mulish", sans-serif;
 }
 
-.main {
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.title {
+h1 {
   font-size: 49px;
   line-height: 56px;
   color: #1f1534;
@@ -65,12 +69,12 @@ a {
   width: 490px;
 }
 
-.title span {
+h1 span {
   color: #89c5cc;
   font-weight: bold;
 }
 
-.subtitle {
+section p {
   font-size: 14px;
   line-height: 28px;
   color: #7d7987;
@@ -78,12 +82,12 @@ a {
   margin: 40px 0;
 }
 
-.button {
+button {
   color: white;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
 
-  background: #69B99D;
+  background: #69b99d;
   border: 0;
   padding: 14px 32px 15px;
 
@@ -97,7 +101,11 @@ a {
   cursor: pointer;
 }
 
-.footer {
+button:hover {
+  background: #4ea788;
+}
+
+footer {
   font-size: 14px;
   line-height: 28px;
 
@@ -106,12 +114,12 @@ a {
   margin-top: 80px;
 }
 
-.footer a {
+footer a {
   font-weight: bold;
 }
 
 #balls {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
