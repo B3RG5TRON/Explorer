@@ -93,7 +93,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10;
+  gap: 10px;
   border-radius: 4px;
 
   cursor: pointer;
