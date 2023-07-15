@@ -4,3 +4,29 @@
 
   box-sizing: border-box;
 }
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+
+  background: #121214;
+}
+
+.card {
+  padding: 0 3.2rem 3.2rem;
+}
+
+.card h2 {
+  color: #E1E1E6;
+  font-size: 3.6rem;
+  font-weight: 900;
+}
+
+.card p {
+  color: #C4C4CC;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
