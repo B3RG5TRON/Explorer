@@ -8,8 +8,71 @@
 
 :root {
   font-size: 62.5%;
+
+  --color-base-white: #ffffff;
+  --color-base-gray-100: #F4FCFF;
+  --color-base-blue-100: #387E96;
+  --color-base-blue-200: #065E7C;
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+  background-color: var(--color-base-gray-100);
+}
+
+header {
+  background: var(--color-base-blue-200);
+  padding: 1.6rem 0;
+}
+
+header,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+header form {
+  flex: 1;
+  font-weight: 600;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+
+  background-color: var(--color-base-gray-100);
+  border: 0;
+  border-radius: 0.6rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base-gray-500);
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
 }
