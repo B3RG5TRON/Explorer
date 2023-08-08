@@ -1,75 +1,386 @@
 * {
-  margin: 0;
-  padding: 0;
-
-  bor-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  background: #101010;
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.7rem;
-  line-height: 110%;
+    display: flex;
+    background-color: #101010;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 110%;
+    gap: 12rem;
+    overflow: hidden;
 }
 
 aside {
-  height: 100vh;
-  padding: 3rem 2.4rem;
-  width: 22rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-right: 0.8px solid rgba(255, 255, 255, 0.1);
+    height: 100vh;
+    width: 22rem;
+    padding: 3rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 0.8px solid rgba(255, 255, 255, 0.1);
 }
 
 #logo {
-  cursor: pointer;
-  transition: 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 #logo:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+    /* list-style: none; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 li {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  cursor: pointer;
-  transition: 0.9s all ease-in-out;
-  padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    transition: 0.9s all ease-in-out;
+    padding: 1rem;
 }
 
 li:hover,
 .more:hover {
-  background-color: black;
-  border-radius: 1.5rem;
+    background-color: black;
+    border-radius: 1.5rem;
 }
 
 .more {
-  display: flex;
-  gap: 1.2rem;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.9s all ease-in-out;
-  padding: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.9s all ease-in-out;
+    padding: 1rem;
+}
+
+main,
+.suggestions {
+    display: flex;
+    margin: 10rem 0;
+}
+
+.suggestions {
+    flex-direction: column;
+    gap: 4rem;
+    width: 400px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10.3rem;
+}
+
+.profile span {
+    color: #3E95EF;
+    font-weight: 700;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-container div p,
+.profile span {
+    font-size: 1.5rem;
+}
+
+.profile-container img {
+    margin-right: 1.2rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.name {
+    opacity: 0.6;
+}
+
+.suggestions-fy {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-suggestions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    align-items: center;
+}
+
+.title-suggestions p:first-child {
+    opacity: 0.60;
+}
+
+.suggestions-fy ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.suggestions-fy li {
+    display: flex;
+    gap: 5.4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 1.6rem;
+}
+
+.suggestions-fy li button {
+    background-color: transparent;
+    color: #616161;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #323232;
+}
+
+.suggestions-fy li p:last-child {
+    opacity: 0.60;
+}
+
+.user-info {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.user-info p,
+.title-suggestions p {
+    font-size: 1.5rem;
+}
+
+.suggestions-fy ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.threads-app {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.threads-app span {
+    opacity: 0.60;
+}
+
+.threads-app img {
+    width: 121px;
+    height: 122px;
+}
+
+.about ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.about li {
+    position: relative;
+    font-size: 1.3rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#about li::before {
+    content: "•";
+    position: absolute;
+    color: #f1f1f1;
+    top: 25%;
+    right: 100%;
+    transform: translate(-50% -50%);
+}
+
+.copyright {
+    margin-top: 1rem;
+}
+
+main {
+    overflow-y: scroll;
+    padding: 1.8rem 3rem;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+#input-area {
+    display: grid;
+    width: 519px;
+    height: 115px;
+    grid-template-areas: 'A B E E E E E E E E G'
+        'A C C C C C C C C C G'
+        'A D H H H H H H H F F';
+    gap: 1rem;
+    border-bottom: 0.6px solid #232333;
+}
+
+
+#input-area img:nth-child(1) {
+    width: 3.8rem;
+    height: 3.8rem;
+    border: .5px solid white;
+    border-radius: 50%;
+    grid-area: A;
+}
+
+.input-username {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: B;
+}
+
+#input-area textarea {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    color: #5F5F5F;
+    outline: none;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    grid-area: C;
+
+}
+
+.publish {
+    background-color: transparent;
+    border: none;
+    color: #3E95EF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    grid-area: G;
+    text-align: right;
+}
+
+.attach {
+    border: none;
+    grid-area: D;
+}
+
+.answer {
+    color: #5F5F5F;
+    text-align: right;
+    font-size: 1.3rem;
+    grid-area: F;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+}
+
+.tweet {
+    display: flex;
+    max-width: 519px;
+    gap: 0.8rem;
+    border-bottom: 0.6px solid #232333;
+    padding: 2rem 0;
+}
+
+.thread {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.thread div {
+    width: 1px;
+    background-color: #343638;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.thread-data,
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.info span:first-child {
+    color: #606060;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.text img {
+    width: 470px;
+}
+
+.text p {
+    font-size: 1.6rem;
+}
+
+.interactions span {
+    color: #616161;
+}
+
+.tweet:last-child {
+    border: none;
+    margin-bottom: 10rem;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #343638 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #343638;
+    border-radius: 10px;
+    border: none;
 }
