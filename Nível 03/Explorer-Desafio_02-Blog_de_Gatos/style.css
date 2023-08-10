@@ -11,8 +11,11 @@
 
   --color-base-white: #ffffff;
   --color-base-gray-100: #F4FCFF;
+  --color-base-gray-500: #202024;
+  --color-base-gray-600: #121214;
   --color-base-blue-100: #387E96;
   --color-base-blue-200: #065E7C;
+  --color-base-input: rgba(255, 255, 255, 0.20);
 }
 
 html,
@@ -23,25 +26,34 @@ input {
 
 body {
   font-size: 1.6rem;
-  background-color: var(--color-base-gray-100);
+  background: var(--color-base-gray-100);
 }
 
-header {
-  background: var(--color-base-blue-200);
-  padding: 1.6rem 0;
+#app {
+  margin: 0 auto;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 43rem;
 }
 
 header,
 nav {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 2.5rem;
+
+  padding: 1.6rem 2.8rem;
+
+  background: var(--color-base-blue-200);
+  border-radius: 0 0 .4rem .4rem;
 }
 
 header form {
   flex: 1;
-  font-weight: 600;
 }
 
 .input-wrapper label {
@@ -49,23 +61,30 @@ header form {
   height: 1px;
   overflow: hidden;
   position: absolute;
+
+  color: white;
 }
 
 .input-wrapper input {
   width: 100%;
-  padding: 1.6rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
 
-  background-color: var(--color-base-gray-100);
+  background: var(--color-base-input);
   border: 0;
-  border-radius: 0.6rem;
+  border-radius: 0.4rem;
+  height: 4rem;
 
   font-size: 1.6rem;
   font-weight: 600;
+  line-height: 100%;
+  color: var(--color-base-white);
 }
 
 .input-wrapper input::placeholder {
-  opacity: 0.56;
-  color: var(--color-base-gray-500);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--color-base-white);
 }
 
 .avatar {
@@ -75,4 +94,42 @@ header form {
   object-fit: cover;
 
   border-radius: 50%;
+}
+
+#cover {
+  width: 100%;
+
+  padding-top: 3rem;
+
+  border-radius: .4rem;
+}
+
+main .container,
+sidebar .container {
+  padding: 3rem 2.2rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: var(--color-base-gray-500);
+}
+
+main p {
+  color: var(--color-base-gray-600);
+  line-height: 160%;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: var(--color-base-gray-500);
+}
+
+sidebar p {
+  color: var(--color-base-gray-600);
+  font-size: 1.4rem;
+  line-height: 160%;
 }
