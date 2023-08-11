@@ -118,13 +118,18 @@ main h1 {
 .buttons {
   display: flex;
   gap: 1.2rem;
+}
 
-  padding-bottom: 3rem;
+main button {
+  background: transparent;
+  border: 0;
 }
 
 main p {
   color: var(--color-base-gray-600);
   line-height: 160%;
+
+  padding-top: 3rem;
 }
 
 h2 {
@@ -164,8 +169,9 @@ footer {
   padding: 1.6rem;
   gap: 1rem;
 
-  background: var(--color-base-blue-100);
+  background: var(--color-base-blue-200);
 
   color: var(--color-base-white);
   font-weight: 600;
+  line-height: 100%;
 }
