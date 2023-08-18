@@ -34,8 +34,6 @@ body {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
-
-  max-width: 70rem;
 }
 
 header,
@@ -174,4 +172,31 @@ footer {
   color: var(--color-base-white);
   font-weight: 600;
   line-height: 100%;
+}
+
+@media (min-width: 700px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "A A A"
+      "B B C"
+      "D D D";
+  }
+
+  header {
+    grid-area: A;
+  }
+
+  main {
+    grid-area: B;
+    padding: 4.4rem;
+  }
+
+  sidebar {
+    grid-area: C;
+  }
+
+  footer {
+    grid-area: D;
+  }
 }
