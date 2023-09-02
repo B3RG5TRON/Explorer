@@ -34,7 +34,7 @@ const patients = [
 let patientsNames = []
 
 for(let patient of patients) {
-  patientsNames.push(patient.name)
+  patientsNames.push(`${patient.name} tem ${patient.age} anos e pesa ${patient.weight}kg`)
 }
 
 alert(patientsNames)
