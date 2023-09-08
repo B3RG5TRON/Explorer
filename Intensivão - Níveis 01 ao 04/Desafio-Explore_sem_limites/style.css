@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-white: #F9F4FB;
+  --color-base-white-2: #FFFFFF;
+  --color-base-purple: #312D64;
+  --color-base-pink: #B52184;
+}
