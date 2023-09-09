@@ -14,9 +14,3 @@
   --color-base-purple: #312D64;
   --color-base-pink: #B52184;
 }
-
-h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-  color: var(--color-base-purple);
-}
