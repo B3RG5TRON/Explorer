@@ -13,4 +13,315 @@
   --color-base-white-2: #FFFFFF;
   --color-base-purple: #312D64;
   --color-base-pink: #B52184;
+  --color-base-shadow: rgba(0, 0, 0, 0.25);
+  --color-base-gradient-purple: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+body {
+  background-color: var(--color-base-white);
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: 'Mulish', sans-serif;
+}
+
+#astronaut {
+  width: 36.4rem;
+  height: 37rem;
+}
+
+.down-arrow {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 9.3rem;
+}
+
+.text-header>h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-base-pink);
+
+  margin-top: 1.7rem;
+}
+
+.text-header>p {
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: var(--color-base-purple);
+
+  margin-bottom: 3.5rem;
+}
+
+.planets {
+  background: var(--color-base-gradient-purple);
+  display: flex;
+  padding: 5.30rem 9.20rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.cards {
+  width: 30rem;
+
+  padding: 2.6rem;
+  align-items: flex-start;
+
+  border-radius: 1.9rem;
+  background: var(--color-base-white-2);
+  box-shadow: 0 0.3rem 1.3rem 0 var(--color-base-shadow);
+}
+
+.img-planets {
+  width: 80px;
+  height: 80px;
+}
+
+.cards>h2 {
+  font-size: 2.9rem;
+  font-weight: 900;
+  color: var(--color-base-pink);
+
+  margin-top: 3rem;
+}
+
+.cards>p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-base-purple);
+
+  margin-top: 1rem;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 7.8rem;
+}
+
+form {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: none;
+
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.fieldset-wrapper>legend {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-base-pink);
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  background: var(--color-base-white);
+
+  width: 100%;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+
+
+  display: flex;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  align-items: center;
+  gap: 1.2rem;
+
+  border-radius: 1.6rem;
+  border: 0.15rem solid var(--color-base-purple);
+}
+
+.input-wrapper input {
+  padding-left: 4rem;
+}
+
+.input-wrapper textarea {
+  height: 12.6rem;
+  resize: none;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color: var(--color-base-purple);
+}
+
+#event-name {
+  background: url(./public/people-icon.svg) no-repeat 1.4rem 1.2rem;
+}
+
+#event-email {
+  background: url(./public/email-icon.svg) no-repeat 1.4rem 1.2rem;
+}
+
+.button-form {
+  padding: 2.4rem 3.2rem 6.5rem;
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--color-base-white-2);
+
+  border: none;
+
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1.6rem;
+  background: var(--color-base-gradient-purple);
+
+  transition: filter 500ms;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+.stars {
+  display: none;
+}
+
+footer {
+  background: var(--color-base-gradient-purple);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+}
+
+footer>p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-base-white-2);
+}
+
+@media (min-width: 1440px) {
+  header {
+    flex-direction: row-reverse;
+    gap: 2.8rem;
+
+    padding-bottom: 13.6rem;
+  }
+
+  .text-header {
+    margin-left: 10.9rem;
+  }
+
+  #astronaut {
+    width: 71.9rem;
+    height: 73.2rem;
+
+    padding-right: 3rem;
+  }
+
+  .down-arrow {
+    justify-content: left;
+  }
+
+  .text-header>h1 {
+    font-size: 5.8rem;
+    line-height: 7.4rem;
+
+    margin-top: 31.7rem;
+  }
+
+  .text-header>p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+
+    margin-bottom: 17.9rem;
+  }
+
+  .planets {
+    padding: 6.4rem 11.1rem;
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  .cards {
+    width: 36.6rem;
+    height: 44.8rem;
+
+    padding: 3.2rem;
+  }
+
+  .img-planets {
+    width: 97px;
+    height: 97px;
+  }
+
+  .cards>h2 {
+    white-space: nowrap;
+    font-size: 3.5rem;
+  }
+
+  .cards>p {
+    max-width: 32.1rem;
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    width: 59.5rem;
+
+    margin: 9.5rem 9.2rem 9.5rem 10.9rem;
+  }
+
+  fieldset {
+    justify-content: left;
+  }
+
+  .fieldset-wrapper>legend {
+    font-size: 4.2rem;
+  }
+
+  .input-wrapper>input,
+  .input-wrapper>textarea {
+    width: 59.5rem;
+  }
+
+  .button-form {
+    padding: 2.4rem 0 0 0;
+  }
+
+  .stars {
+    display: flex;
+    
+  }
 }

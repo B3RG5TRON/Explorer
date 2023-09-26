@@ -2,26 +2,38 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Explore sem limites</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div id="app">
     <header>
-      <img src="./astronaut.png" alt="imagem de um astronauta no espaço" id="astronaut">
-      <h1>Explore sem limites</h1>
-      <p>Porque o aprendizado é contínuo</p>
-      <img src="./down_arrow.svg" alt="seta apontada para baixo" id="down-arrow">
+      <div class="astronaut">
+        <img src="/public/astronaut.png" alt="imagem de um astronauta no espaço" id="astronaut" />
+      </div>
+      <div class="text-header">
+        <h1>Explore sem limites</h1>
+        <p>Porque o aprendizado é contínuo</p>
+        <a href="#cards" class="down-arrow">
+          <img src="/public/down_arrow.svg" alt="seta apontada para baixo" id="down-arrow" />
+        </a>
+      </div>
     </header>
 
     <main>
       <div class="planets">
         <div class="cards">
-          <img src="./planet-01.svg" alt="imagem de planeta" id="img-planets">
+          <img src="/public/planet-01.svg" alt="imagem de planeta" id="img-planets" />
           <h2>Não pare nunca</h2>
           <p>
             Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca".
@@ -29,7 +41,7 @@
           </p>
         </div>
         <div class="cards">
-          <img src="./planet-02.svg" alt="imagem de planeta" id="img-planets">
+          <img src="/public/planet-02.svg" alt="imagem de planeta" id="img-planets" />
           <h2>Só volta</h2>
           <p>
             Se você parou ou perdeu o ritmo em alguma atividade ou projeto, saiba que nunca é tarde para recomeçar. Às
@@ -37,7 +49,7 @@
           </p>
         </div>
         <div class="cards">
-          <img src="./planet-03.svg" alt="imagem de planeta" id="img-planets">
+          <img src="/public/planet-03.svg" alt="imagem de planeta" id="img-planets" />
           <h2>Siga seu ritmo</h2>
           <p>
             Avançar pouco a pouco mantém progresso constante em objetivos, evitando parar ou desistir. Mesmo pequenos
@@ -54,23 +66,25 @@
               <legend>Entre em contato</legend>
 
               <div class="input-wrapper">
-                <label for="event-name">Seu nome</label>
-                <input type="text" id="event-name" required />
+                <input type="text" id="event-name" placeholder="Seu nome" required />
               </div>
 
               <div class="input-wrapper">
-                <label for="event-email">Email</label>
-                <input type="email" id="event-email" required />
+                <input type="email" id="event-email" placeholder="Email" required />
               </div>
 
               <div class="input-wrapper">
-                <label for="event-message">Digite sua mensagem aqui...</label>
-                <textarea id="event-message" required></textarea>
+                <textarea id="event-message" placeholder="Digite sua mensagem aqui..." required></textarea>
               </div>
           </fieldset>
 
-          <button type="submit" id="button-form">Enviar Mensagem</button>
+          <div class="button-form"">
+            <button type=" submit">Enviar Mensagem</button>
+          </div>
         </form>
+        <div class="stars">
+          <img src="./public/stars.png" alt="estrelas na cor rosa">
+        </div>
       </div>
     </main>
 
