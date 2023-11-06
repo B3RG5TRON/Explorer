@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --hue: 194;
     --bg-color: hsl(var(--hue), 5%, 7%);
@@ -15,7 +14,6 @@
 
     font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
-
 
 html.light {
     --text-color: hsl(var(--hue), 5%, 7%);
@@ -36,7 +34,6 @@ html:not(.light) .ph-moon {
     line-height: 0;
     color: var(--text-color);
 }
-
 
 .sr-only {
     width: 1px;
@@ -93,7 +90,6 @@ button {
 .secondary {
     color: var(--button-secondary);
 }
-
 
 /* controls */
 .running .ph-play-circle,
